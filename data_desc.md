@@ -1,0 +1,26 @@
+# Dataset Description
+
+- sample_id - Pengidentifikasi unik untuk setiap sampel tanah dalam dataset.
+- source_id - Pengidentifikasi dataset asal, proyek riset, atau laboratorium tempat sampel tanah ini dikumpulkan.
+- has_band_A_spectrum - Indikator apakah sampel ini memiliki data gelombang cahaya pertama (1 jika ya, 0 jika tidak).
+- has_band_B_spectrum - Indikator apakah sampel ini memiliki data gelombang cahaya kedua (1 jika ya, 0 jika tidak).
+- sampling_strategy - Strategi atau metode yang digunakan oleh tim lapangan dalam memilih titik pengambilan sampel tanah.
+- sampling_depth_cm - Kedalaman titik pengambilan sampel tanah dari permukaan, diukur dalam satuan sentimeter (cm).
+- geo_zone_macro - Kode wilayah geografis skala besar (makro) tempat sampel diambil.
+- geo_zone_meso - Kode wilayah geografis skala menengah (meso) yang berada di dalam wilayah makro.
+- geo_zone_micro - Kode wilayah geografis skala lokal/kecil (mikro) yang berada di dalam wilayah meso.
+- land_cover_type - Jenis tutupan lahan di area pengambilan sampel (misalnya lahan pertanian, hutan, semak belukar).
+- biome - Klasifikasi biom ekosistem regional tempat sampel tanah tersebut berada.
+- parent_rock_type - Jenis batuan induk geologis asal tanah tersebut terbentuk melalui proses pelapukan.
+- property_particle_coarse - Proporsi atau indeks partikel tanah yang berukuran kasar (seperti fraksi pasir atau kerikil).
+- property_particle_fine - Proporsi atau indeks partikel tanah yang berukuran halus (seperti fraksi lempung atau debu).
+- [TARGET] property_organic_content - Nilai kandungan bahan organik di dalam sampel tanah. Kolom ini yang akan diprediksi oleh peserta.
+- property_acidity_index - Indeks keasaman tanah.
+- cation_Ca - Nilai konsentrasi elemen kation Kalsium di dalam tanah.
+- cation_Mg - Nilai konsentrasi elemen kation Magnesium di dalam tanah.
+- cation_Na - Nilai konsentrasi elemen kation Natrium di dalam tanah.
+- cation_exchange_capacity - Kapasitas Tukar Kation (KTK), yaitu indikator kemampuan tanah dalam mengikat dan menukar ion kation yang memengaruhi kesuburan tanah.
+- latitude - Koordinat lintang geografis lokasi pengambilan sampel tanah di lapangan.
+- longitude - Koordinat bujur geografis lokasi pengambilan sampel tanah di lapangan.
+- spectral_band_A_PC_1 hingga spectral_band_A_PC_15 - Komponen utama hasil PCA dari blok gelombang cahaya pertama. Blok ini difokuskan untuk menangkap informasi fisik tanah.
+- spectral_band_B_PC_1 hingga spectral_band_B_PC_15 - Komponen utama hasil PCA dari blok gelombang cahaya kedua. Blok ini difokuskan untuk menangkap informasi kimia murni tanah.

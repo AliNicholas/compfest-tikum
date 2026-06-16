@@ -1,0 +1,41 @@
+Tanah merupakan aset vital dalam sektor pertanian dan ketahanan pangan. Salah satu indikator paling krusial untuk menentukan tingkat kesuburan tanah adalah kandungan bahan organik. Secara tradisional, pengukuran kandungan ini memerlukan uji laboratorium yang memakan waktu lama dan biaya mahal. Sebagai solusinya, teknologi pengindraan jauh dan spektroskopi molekuler hadir menjadi alternatif untuk memetakan karakteristik kimia tanah secara cepat dan efisien.
+
+Dalam kompetisi ini, peserta ditantang untuk membangun model machine learning yang mampu memprediksi kandungan bahan organik tanah berdasarkan data geografis dan kompresi data spektral. Dataset yang disediakan mencakup data koordinat, zona makro wilayah, serta dua blok fitur spektral utama hasil reduksi dimensi. Kedua blok tersebut adalah spektrum optik yang datanya tersedia penuh, serta spektrum inframerah tengah atau MIR yang sangat sensitif terhadap bahan organik namun memiliki banyak nilai kosong akibat perbedaan alat uji laboratorium.
+
+Tantangan utama bagi para peserta adalah merancang strategi penanganan data hilang yang cerdas tanpa membuang informasi berharga dari sampel yang tidak lengkap. Model terbaik yang dihasilkan dari kompetisi ini diharapkan dapat berkontribusi langsung pada pengembangan teknologi pertanian presisi dan pemetaan tanah digital di Indonesia, guna membantu optimalisasi lahan dan menyokong kedaulatan pangan nasional.
+
+
+Evaluation
+Metrik Evaluasi
+Metrik utama yang digunakan untuk mengevaluasi performa model pada kompetisi ini adalah Root Mean Squared Error (RMSE).
+
+RMSE mengukur rata-rata dari besarnya kesalahan (error) antara nilai prediksi yang dihasilkan oleh model dengan nilai aktual (ground truth). Metrik ini didefinisikan dengan rumus berikut:
+
+
+Keterangan:
+
+n adalah jumlah total data dalam dataset pengujian.
+yᵢ adalah nilai aktual untuk sampel ke-i.
+ŷᵢ adalah nilai prediksi yang dihasilkan oleh model untuk sampel ke-i.
+
+Format File Submission
+Peserta diwajibkan untuk mengunggah file prediksi dalam format CSV (Comma-Separated Values). File submission harus berisi tepat dua kolom: sample_id dan property_organic_content.
+
+Pastikan file Anda memiliki header yang sesuai dengan format di bawah ini. Untuk setiap sample_id yang terdapat pada dataset pengujian (test set), Anda harus memprediksi nilai kontinu pada kolom target.
+
+Setelah memprediksi data kandungan organik tanah pada kompetisi Kaggle di atas, akan ada bagian research question di mana kalian akan menjawab pertanyaan-pertanyaan yang berkaitan dengan dataset tersebut. Untuk konsistensi, Anda boleh menggunakan Training Dataset untuk tahap ini. Jawaban harap dikumpulkan dalam bentuk python notebook dengan format .ipynb. Anda bebas menggunakan alat-alat visualisasi, uji hipotesis, sitasi sumber, ataupun hal lainnya untuk mendukung jawaban Anda.
+1. Dalam konteks bisnis pertanian dan kebijakan pangan, apakah memprediksi kandungan organik tanah merupakan hal yang mendesak? Jelaskan urgensinya dari perspektif efisiensi biaya operasional dan manajemen lahan berkelanjutan!
+2. Apakah model prediksi kandungan organik tanah Anda mengalami overfit atau underfit? Tunjukkan buktinya secara empiris melalui metrik evaluasi atau melalui visualisasi yang relevan, serta jelaskan langkah mitigasi yang Anda lakukan! Jika tidak mengalami keduanya, jelaskan alasannya!
+3. Apakah ada pola distribusi kandungan organik tanah yang berbeda secara signifikan antar wilayah geografis? Berdasarkan pola tersebut, kira-kira kondisi ekosistem seperti apa yang paling dominan dalam dataset ini? Jelaskan reasoning Anda berdasarkan informasi ekologis dan tutupan lahan yang terlihat!
+4. Apakah ada korelasi kandungan organik tanah antar tingkat wilayah geografis? Berapa rasio perbandingan rata-rata kandungan organik antar wilayah tersebut, dan bagaimana ini memengaruhi pendekatan pemodelan Anda?
+5. Jawablah pertanyaan statistik berikut : 
+a.	Berapa rata-rata kandungan organik tanah dari tiap ekosistem ketika tingkat keasaman tanah berada di bawah persentil 25 dan kapasitas tukar kation berada di bawah rata-rata? Apa insight yang bisa didapat dari hal ini?
+b.	Apakah ada kombinasi jenis tutupan lahan dan wilayah geografis tertentu yang memiliki nilai kandungan organik yang dapat dianggap sebagai outlier? Jelaskan justifikasi Anda!
+6. Apakah ada pasangan variabel yang berkorelasi tinggi? Apakah ada efek multicollinearity yang perlu diatasi dalam modeling?
+7. Fitur baru apa saja yang Anda buat melalui proses feature engineering? Jelaskan bagaimana fitur tersebut meningkatkan pemahaman model terhadap pola kandungan organik tanah!
+8. Jelaskan model yang Anda gunakan dalam memprediksi kandungan organik tanah! Mengapa Anda memilih model tersebut dibanding alternatif lain, khususnya dalam konteks data yang memiliki representasi spektral?
+9. Menurut Anda, apakah metrik penilaian RMSE tepat untuk kasus prediksi kandungan organik tanah ini? Jika tidak, metrik apa yang lebih tepat? Elaborasikan jawaban Anda dengan mempertimbangkan karakteristik distribusi target!
+10. Jika Anda boleh mengambil data eksternal, data tentang apa yang akan Anda ambil untuk meningkatkan akurasi prediksi kandungan organik tanah? Jelaskan alasan pemilihannya dan bagaimana data tersebut dapat diintegrasikan ke dalam pipeline pemodelan Anda!
+
+
+ 
