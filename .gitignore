@@ -10,3 +10,7 @@ __pycache__/
 # Temporary analysis artifacts
 .notebook_previews/
 .python_deps/
+
+# Generated modeling artifacts
+submissions/
+experiments_cache/
